@@ -1,0 +1,9 @@
+Tags:
+Preconditions:
+*Setting Proxy*
+Browsers like Internet Explorer, Google Chrome and Safari requires proxy to be set to "localhost" as the proxy host and "9999" as the proxy port.
+
+*For https(SSL certificates) urls*
+Sahi generates certificates for https urls that needs confirmation. For more information, please visit http://sahi.co.in/w/https-ssl
+
+For more information on sahi visit_ http://www.sahi.co.in _
