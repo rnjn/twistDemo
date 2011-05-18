@@ -1,2 +1,5 @@
 sahi/
 bin/
+logs/
+.settings/
+twist-libs/
