@@ -24,12 +24,6 @@ public class UserCreation {
 	}
 
 
-	public void delete(String userId) throws Exception {
-		navigateToUserManagement();
-		browser.textbox("search[email_contains]").setValue(userId);
-		browser.submit("Search").click();
-	}
-
 	public void verifyIfIsCreatedSuccessfully(String userId) throws Exception {
 		navigateToUserManagement();
 		browser.textbox("search[email_contains]").setValue(userId);
@@ -45,6 +39,16 @@ public class UserCreation {
 		browser.submit("Log In").click();
 		browser.navigateTo(OpenSpreeWebsite.SPREE_DEMO_URL + "/admin");
 		browser.link("Users").click();
+	}
+
+
+	public void delete(String userId) throws Exception {
+		navigateToUserManagement();
+		browser.textbox("search[email_contains]").setValue(userId);
+		browser.submit("Search").click();
+		browser.link("Delete").click();
+		browser.button("ÊOKÊ").click();
+	
 	}
 
 }
