@@ -15,7 +15,8 @@ public class OpenSpreeWebsite {
 	}
 
 	public void tearDown() throws Exception {
-		browser.link("Logout").click();
+		if(browser.link("Logout").exists())
+			browser.link("Logout").click();
 	}
 
 }
