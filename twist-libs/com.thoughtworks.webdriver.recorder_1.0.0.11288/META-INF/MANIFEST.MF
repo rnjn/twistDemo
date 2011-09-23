@@ -1,0 +1,27 @@
+Manifest-Version: 1.0
+Export-Package: com.google.common.base,com.thoughtworks.selenium,com.t
+ houghtworks.webdriver,com.thoughtworks.webdriver.recorder; uses:="net
+ .sf.sahi.client,  org.openqa.selenium.chrome,  org.openqa.selenium,  
+ com.thoughtworks.webdriver.recorder.browser",com.thoughtworks.webdriv
+ er.recorder.browser,com.thoughtworks.webdriver.recorder.templates,com
+ .thoughtworks.webdriver.recorder.utils,org.apache.commons.collections
+ ,org.openqa.selenium,org.openqa.selenium.browserlaunchers,org.openqa.
+ selenium.chrome,org.openqa.selenium.firefox,org.openqa.selenium.inter
+ actions,org.openqa.selenium.interactions.internal,org.openqa.selenium
+ .net,org.openqa.selenium.os,org.openqa.selenium.remote,org.openqa.sel
+ enium.support.ui
+Require-Bundle: org.apache.ant;bundle-version="1.7.1"
+Bundle-Vendor: ThoughtWorks Studios
+Bundle-ClassPath: .,lib/selenium-server-standalone-2.5.0.jar,sahi/lib/
+ ant-sahi.jar,sahi/extlib/apc/commons-codec-1.3.jar,sahi/extlib/rhino/
+ js.jar,lib/mail.jar,lib/mailapi.jar,lib/xmlrpc-client-3.1.3.jar,lib/x
+ mlrpc-common-3.1.3.jar,lib/commons-cli-1.2.jar
+Bundle-Version: 1.0.0.11288
+Bundle-Name: Webdriver Recorder
+Bundle-Activator: com.thoughtworks.webdriver.recorder.Activator
+Bundle-ManifestVersion: 2
+Import-Package: org.eclipse.swt,org.eclipse.swt.events,org.eclipse.swt
+ .layout,org.eclipse.swt.widgets
+Bundle-SymbolicName: com.thoughtworks.webdriver.recorder
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+
