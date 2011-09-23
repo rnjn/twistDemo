@@ -1,0 +1,13 @@
+Tags:
+Preconditions:visit ofbiz
+Register User:
+#Navigate to the user registration page
+#Set name as "Mr." "Uriah" "Heep"
+#Set address as "Old post office yard" "Winding road" "London" 
+#Set postal code as "90210" and country as "United Kingdom"
+#Do not allow address solicitation
+#Set email address as "uheep@antagonist.com" and password as "iwasmisunderstood"
+#Set user name with prefix "uriah" 
+#Set password hint as "magician"
+#Register user
+#Verify User "Uriah" "Heep" has been created

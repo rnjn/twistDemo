@@ -1,5 +1,7 @@
-sahi/
-bin/
-logs/
-.settings/
-twist-libs/
+.metadata
+git.properties
+bin
+bin/**
+logs/**
+.metadata
+**/*#**

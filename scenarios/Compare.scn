@@ -1,0 +1,8 @@
+Tags:
+Preconditions:visit ofbiz,verify empty shopping cart
+Compare products,Simple Search:
+#Verify empty Shopping Cart
+$Search and verify "Enchiladas" and add it to be compared
+$Search and verify "Gold Pizza" and add it to be compared
+#Compare products
+#Verify that "Enchiladas" and "Gold Pizza" appear are compared

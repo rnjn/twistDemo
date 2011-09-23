@@ -1,6 +1,6 @@
-Sahi:
-	class: net.sf.sahi.client.Browser
+Selenium2:
+	class: org.openqa.selenium.WebDriver
 	fieldName: browser
-	project_path: /Spree
+	project_path: /ofBiz
 language:
 	class: com.thoughtworks.twist.language.java.Java

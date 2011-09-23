@@ -1,9 +1,0 @@
-Tags:
-Preconditions:Open Spree Website
-Metadata:ScenarioType=Auto
-
-User Creation:
-#Create User "roderick@spode.com" with password "dictator"
-#Verify if "roderick@spode.com" is created successfully
-#Delete "roderick@spode.com"
-

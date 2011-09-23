@@ -1,0 +1,20 @@
+Tags:
+Preconditions:visit ofbiz
+Simple Search, Home Page:
+#Go to Home Page
+#Search for "Enchiladas"
+#Verify that search results show "Enchiladas"
+#Open product "Enchiladas" 
+
+
+Advanced Search, Home Page, Simple Search:
+#Go to Home Page
+#Go to Advanced Search
+$Advanced search for "Enchiladas" with color "Black" size "4-Wheel" and license "LGPL"
+#Verify that no results are found
+#Remove constraints for "Color"
+#Verify that no results are found
+#Remove constraints for "Size"
+#Verify that no results are found
+#Remove constraints for "License"
+#Verify that search results show "Enchiladas"
