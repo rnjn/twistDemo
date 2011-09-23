@@ -6,5 +6,35 @@
 	<classpathentry kind="con" path="com.thoughtworks.twist.CORE"/>
 	<classpathentry kind="con" path="com.thoughtworks.twist.driver.SAHI/2.0.0"/>
 	<classpathentry kind="con" path="com.thoughtworks.twist.language.JAVA"/>
+	<classpathentry kind="lib" path="twist-libs/ant-junit.jar"/>
+	<classpathentry kind="lib" path="twist-libs/ant.jar"/>
+	<classpathentry kind="lib" path="twist-libs/com.thoughtworks.net.sf.jsonlibs_2.4.0.jar"/>
+	<classpathentry kind="lib" path="twist-libs/com.thoughtworks.ognl_2.7.3.jar"/>
+	<classpathentry kind="lib" path="twist-libs/com.thoughtworks.org.apache.commons.jexl_1.1.0.jar"/>
+	<classpathentry kind="lib" path="twist-libs/com.thoughtworks.org.apache.ecs_1.4.2.jar"/>
+	<classpathentry kind="lib" path="twist-libs/com.thoughtworks.org.jboss.javassist_3.7.0.GA.jar"/>
+	<classpathentry kind="lib" path="twist-libs/com.thoughtworks.twist.core_2.3.1.11288.jar"/>
+	<classpathentry kind="lib" path="twist-libs/com.thoughtworks.twist.driver.core_2.3.1.11288.jar"/>
+	<classpathentry kind="lib" path="twist-libs/com.thoughtworks.twist.driver.webdriver_2.5.0.11288.jar"/>
+	<classpathentry kind="lib" path="twist-libs/com.thoughtworks.twist.language.common_2.3.1.11288.jar"/>
+	<classpathentry kind="lib" path="twist-libs/com.thoughtworks.twist.language.core_2.3.1.11288.jar"/>
+	<classpathentry kind="lib" path="twist-libs/com.thoughtworks.twist.language.java_2.3.1.11288.jar"/>
+	<classpathentry kind="lib" path="twist-libs/junit.jar"/>
+	<classpathentry kind="lib" path="twist-libs/mail.jar"/>
+	<classpathentry kind="lib" path="twist-libs/mailapi.jar"/>
+	<classpathentry kind="lib" path="twist-libs/org.apache.commons.codec_1.3.0.v201101211617.jar"/>
+	<classpathentry kind="lib" path="twist-libs/org.apache.commons.collections_3.2.0.v200803061811.jar"/>
+	<classpathentry kind="lib" path="twist-libs/org.apache.commons.lang_2.4.0.v201005080502.jar"/>
+	<classpathentry kind="lib" path="twist-libs/org.apache.commons.logging_1.0.4.v201101211617.jar"/>
+	<classpathentry kind="lib" path="twist-libs/org.apache.log4j_1.2.13.v200903072027.jar"/>
+	<classpathentry kind="lib" path="twist-libs/org.apache.mina.core_2.0.0.jar"/>
+	<classpathentry kind="lib" path="twist-libs/org.apache.velocity_1.5.0.jar"/>
+	<classpathentry kind="lib" path="twist-libs/org.hamcrest.core_1.1.0.v20090501071000.jar"/>
+	<classpathentry kind="lib" path="twist-libs/org.slf4j_1.5.0.jar"/>
+	<classpathentry kind="lib" path="twist-libs/org.springframework_2.5.4.jar"/>
+	<classpathentry kind="lib" path="twist-libs/selenium-server-standalone-2.5.0.jar"/>
+	<classpathentry kind="lib" path="twist-libs/xmlrpc-client-3.1.3.jar"/>
+	<classpathentry kind="lib" path="twist-libs/xmlrpc-common-3.1.3.jar"/>
+	<classpathentry kind="lib" path="/Users/gogo/work/twistDemo/twist-libs/com.thoughtworks.webdriver.recorder_1.0.0.11288"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
