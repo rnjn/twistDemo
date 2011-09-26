@@ -7,5 +7,5 @@ reports/**
 .metadata
 **/*#**
 chromedriver.log
-twist.properties
+src/twist.properties
 *#*

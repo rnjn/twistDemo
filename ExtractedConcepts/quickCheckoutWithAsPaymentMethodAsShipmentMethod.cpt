@@ -1,0 +1,11 @@
+Metadata:Concept=$Quick Checkout with <COD> as payment method <FEDEX Next Afternoon> as shipment method
+Quick Checkout:
+#Choose Quick Checkout
+#Select <COD> as the method of payment
+#Select first stored address as shipping address
+#Select <FEDEX Next Afternoon> as the shipping method
+#Choose to ship the order only when all the items in the order are ready
+#Add "Ship quick, or else..." as special instructions
+#Mark this order as a gift
+#Add "A fine gift for me" as the gift message
+#Continue to final order review
