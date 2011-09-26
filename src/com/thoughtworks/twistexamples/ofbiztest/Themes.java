@@ -11,15 +11,24 @@ public class Themes {
 
 	public Themes(WebDriver browser) {
 		this.browser = browser;
+
 	}
 
-	public void setAdminTheme() throws Exception {
-		browser.findElements(By.linkText("PREFERENCES")).get(0).click();
-		browser.findElement(By.id("theme")).click();
-		browser.findElements(
-				By.linkText("It's bizzness, it's bizzness time. I couldn't have said it better myself. This theme gets down"))
-				.get(0).click();
+	public void setAdminThemeTo(String partialThemeName) throws Exception {
+		if (themesAreNotDirectlyOnThePage()) {
 
+			browser.findElements(By.linkText("PREFERENCES")).get(0).click();
+			browser.findElement(By.id("theme")).click();
+			browser.findElements(By.partialLinkText(partialThemeName)).get(0).click();
+		} else {
+			browser.findElements(By.linkText("Visual Themes")).get(0).click();
+			browser.findElements(By.partialLinkText(partialThemeName)).get(0).click();
+		}
+
+	}
+
+	private boolean themesAreNotDirectlyOnThePage() {
+		return browser.findElements(By.linkText("Visual Themes")).isEmpty();
 	}
 
 }

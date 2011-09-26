@@ -1,8 +1,9 @@
 Tags:user related,admin
 Preconditions:
-User Management, Administration Home Page:
+User Management, Administration Home Page, Themes:
 #Go to admin home page
 #Login as administrator
+#Set Admin Theme to "bizzness"
 #Go to Party Manager
 #Search for user by user ID "admin"
 #Verify that user "admin" shows up in the search results page 
