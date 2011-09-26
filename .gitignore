@@ -3,6 +3,7 @@ git.properties
 bin
 bin/**
 logs/**
+reports/**
 .metadata
 **/*#**
 chromedriver.log

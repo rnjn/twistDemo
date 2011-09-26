@@ -1,0 +1,15 @@
+Tags:
+Preconditions:visit ofbiz,create new user
+Quick Checkout, Home Page:
+#Go to home page
+$Search for and add "3" numbers of "Gold Pizza" to Shopping Cart
+$Search for and add "2" numbers of "Enchiladas" to Shopping Cart
+#Choose Quick Checkout
+#Select "COD" as the method of payment
+#Select first stored address as shipping address
+#Select "FEDEX Next Afternoon" as the shipping method
+#Choose to ship the order only when all the items in the order are ready
+#Add "Ship quick, or else..." as Special Instructions
+#Mark this order as a gift
+#Add "A fine gift for me" as the Gift Message
+#Continue to final order review

@@ -8,6 +8,9 @@ import static junit.framework.Assert.assertNotNull;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+import com.gargoylesoftware.htmlunit.javascript.background.JavaScriptExecutor;
 
 public class AddItemsToCart {
 
@@ -19,10 +22,12 @@ public class AddItemsToCart {
 
 	public void addToShoppingCart(String integer1, String string2)
 			throws Exception {
-		WebElement quantityInput = browser.findElement(By.name("quantity"));
+		WebElement quantityInput = browser.findElements(By.name("quantity"))
+				.get(0);
 		quantityInput.clear();
 		quantityInput.sendKeys(integer1);
-		quantityInput.findElement(By.xpath("..")).findElement(By.tagName("a")).click();
+		quantityInput.findElement(By.xpath("..")).findElement(By.tagName("a"))
+				.click();
 
 	}
 
@@ -33,12 +38,13 @@ public class AddItemsToCart {
 	public void verifyThatWereAddedToTheShoppingCart(String string1,
 			String string2) throws Exception {
 
-		WebElement product = browser.findElement(By
-				.partialLinkText(string2));
+		WebElement product = browser.findElement(By.partialLinkText(string2));
 		assertNotNull(product);
-		
-		WebElement parentRow = product.findElement(By.xpath("..")).findElement(By.xpath(".."));
-		WebElement findElement = parentRow.findElement(By.className("inputBox"));
+
+		WebElement parentRow = product.findElement(By.xpath("..")).findElement(
+				By.xpath(".."));
+		WebElement findElement = parentRow
+				.findElement(By.className("inputBox"));
 		assertEquals(string1, findElement.getAttribute("value"));
 	}
 

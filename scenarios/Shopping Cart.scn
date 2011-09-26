@@ -2,8 +2,8 @@ Tags:
 Preconditions:visit ofbiz,create new user
 Add items to cart, Home Page, Simple Search, Advanced Search:
 #Go to Home Page
-#Search for "Enchiladas"
-#Open product "Enchiladas"
-#Add "2" "Enchiladas" to Shopping Cart
+$Search for and add "2" numbers of "Enchiladas" to Shopping Cart
 #Navigate to shopping cart
 #Verify that "2" "Enchiladas" were added to the Shopping cart
+
+
