@@ -4,8 +4,11 @@ package com.thoughtworks.twistexamples.ofbiztest;
 
 import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertNotNull;
+import static junit.framework.Assert.fail;
 
 import java.util.List;
+
+import junit.framework.Assert;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -40,17 +43,43 @@ public class AddItemsToCart {
 		browser.findElements(By.linkText("View Cart")).get(0).click();
 	}
 
-	public void verifyThatWereAddedToTheShoppingCart(String string1,
-			String string2) throws Exception {
+	public void verifyThatWereAddedToTheShoppingCart(String quantity,
+			String productName) throws Exception {
 
-		WebElement product = browser.findElement(By.partialLinkText(string2));
-		assertNotNull(product);
-
-		WebElement parentRow = product.findElement(By.xpath("..")).findElement(
-				By.xpath(".."));
+		WebElement product = verifyAndGetProductLinkElement(productName);
+		WebElement parentRow = getLinkElementParent(product);
 		WebElement findElement = parentRow
 				.findElement(By.className("inputBox"));
-		assertEquals(string1, findElement.getAttribute("value"));
+		assertEquals(quantity, findElement.getAttribute("value"));
+	}
+
+	public void verifyThatWereAddedToTheShoppingCartFromShoppingList(
+			String quantity, String productName) throws Exception {
+
+		WebElement product = verifyAndGetProductLinkElement(productName);
+		WebElement parentRow = getLinkElementParent(product);
+		List<WebElement> cells = parentRow.findElements(By.tagName("td"));
+		for (WebElement cell : cells) {
+			if (!cell.getText().equals(quantity))
+				continue;
+			else
+				return;
+		}
+		Assert.fail("Quantity is not displayed");
+	}
+	
+
+	private WebElement getLinkElementParent(WebElement product) {
+		WebElement parentRow = product.findElement(By.xpath("..")).findElement(
+				By.xpath(".."));
+		return parentRow;
+	}
+
+	private WebElement verifyAndGetProductLinkElement(String productName) {
+		WebElement product = browser.findElement(By
+				.partialLinkText(productName));
+		assertNotNull(product);
+		return product;
 	}
 
 }

@@ -42,7 +42,7 @@ public class QuickCheckout {
 		List<WebElement> shippingMethods = browser.findElements(By
 				.name("shipping_method"));
 		for (WebElement shippingMethod : shippingMethods) {
-			if (shippingMethod.getAttribute("va3lue").equals("NEXT_PM@FEDEX")) {
+			if (shippingMethod.getAttribute("value").equals("NEXT_PM@FEDEX")) {
 				shippingMethod.click();
 				return;
 			}

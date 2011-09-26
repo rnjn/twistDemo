@@ -12,6 +12,12 @@ New Shopping List:
 Add items to Shopping List, Home Page, Simple Search:
 $Add "2" "Round Gizmo"s to the "My wish list" shopping list
 $Add "3" "Tiny Gizmo"s to the "My wish list" shopping list
-#Edit "My wish list" shopping list
+#Visit and Edit "My wish list" shopping list
 #Verify that "2" numbers of "Round Gizmo" are added to shopping list
 #Verify that "3" numbers of "Tiny Gizmo" are added to shopping list
+
+Buy from Shopping List, Add items to Shopping List, Add items to cart:
+#Visit and Edit "My wish list" shopping list
+#Add "Round Gizmo" to shopping cart
+#Navigate to shopping cart
+#Verify that "2" "Round Gizmo" were added to the Shopping cart from Shopping List

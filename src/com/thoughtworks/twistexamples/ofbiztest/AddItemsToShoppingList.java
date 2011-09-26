@@ -12,6 +12,8 @@ import org.openqa.selenium.WebElement;
 
 import org.openqa.selenium.By;
 
+import com.thoughtworks.twistexamples.pages.ShoppingListItemFinder;
+
 public class AddItemsToShoppingList {
 
 	private WebDriver browser;
@@ -44,36 +46,19 @@ public class AddItemsToShoppingList {
 	public void verifyThatNumbersOfAreAddedToShoppingList(String quantity,
 			String productName) throws Exception {
 
-		WebElement productLink = findProductLink(productName);
+		ShoppingListItemFinder shoppingListItemFinder = new ShoppingListItemFinder(browser, productName);
+
+		WebElement productLink = shoppingListItemFinder.getProductLinkElement();
 		assertNotNull(productName + " not displayed", productLink);
-
-		List<WebElement> quantityInputs = productLink
-				.findElement(By.xpath("..")).findElement(By.xpath(".."))
-				.findElement(By.xpath("..")).findElements(By.name("quantity"));
-
-		
-		WebElement quantityInput = productLink
-				.findElement(By.xpath("..")).findElement(By.xpath(".."))
-				.findElement(By.xpath("..")).findElement(By.name("quantity"));
+		WebElement quantityInput =  shoppingListItemFinder.getProductQuantityElement(); 
 		assertTrue(productName + " has " + quantityInput.getAttribute("value") + " instead of "
 				+ quantity + " numbers added to the shopping list",
 				quantityInput.getAttribute("value").equals(quantity));
 		
 	}
 
-	private WebElement findProductLink(String productName) {
-		List<WebElement> buttonTexts = browser.findElements(By
-				.className("buttontext"));
-		for (WebElement buttonText : buttonTexts) {
-			if (buttonText.getText().toLowerCase()
-					.contains(productName.toLowerCase())) {
-				return buttonText;
-			}
-		}
-		return null;
-	}
 
-	public void editShoppingList(String shoppingListName) throws Exception {
+	public void visitAndEditShoppingList(String shoppingListName) throws Exception {
 		browser.findElements(By.linkText("Shopping Lists")).get(0).click();
 		new org.openqa.selenium.support.ui.Select(browser.findElement(By
 				.name("shoppingListId"))).selectByVisibleText(shoppingListName);
@@ -82,5 +67,6 @@ public class AddItemsToShoppingList {
 				.findElement(By.linkText("Edit")).click();
 
 	}
+
 
 }
