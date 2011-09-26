@@ -1,0 +1,23 @@
+#possible values for browser can be chrome, firefox, ie, htmlunit
+webdriver.browser=firefox
+webdriver.browser.script=
+webdriver.browser.profile=
+webdriver.browser.javascriptEnabled=true
+webdriver.browser.nativeEvents=false
+
+#This is an optional field to launch the custom chrome server. If not given, Twist uses the bundled chrome server.
+webdriver.chrome.driver=
+
+#webdriver.browser.version is applicable only for HtmlUnit, e.g FIREFOX_3, FIREFOX_3_6, INTERNET_EXPLORER_6, INTERNET_EXPLORER_7, INTERNET_EXPLORER_8
+webdriver.browser.version=
+webdriver.reap_profile=true
+#property to be set with the remote mobile server address, used by android and iphone
+webdriver.mobile.server=
+
+
+
+twist.generate_local_report=true
+# Modify the property below to write HTML reports to a custom folder.
+# Relative paths such as "reports" would cause the folder to be created within your project
+# You may use absolute paths such as "/reports" or "\\\\machinename/folder1/folder2" (in Windows) too
+twist.local_report_location=reports
