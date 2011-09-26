@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. -->
+<project basedir="." default="build" name="Ofbiz">
+    <property environment="env"/>
+    <property name="ECLIPSE_HOME" value="../xtwist"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.6"/>
+    <property name="source" value="1.6"/>
+    <path id="JUnit 4.libraryclasspath">
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.junit_4.8.2.v4_8_2_v20110321-1705/junit.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.hamcrest.core_1.1.0.v20090501071000.jar"/>
+    </path>
+    <path id="Twist Core Libraries.libraryclasspath">
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.apache.commons.lang_2.4.0.v201005080502.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.apache.log4j_1.2.13.v200903072027.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.apache.commons.codec_1.3.0.v201101211617.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.apache.commons.logging_1.0.4.v201101211617.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/com.thoughtworks.ognl_2.7.3.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/com.thoughtworks.org.jboss.javassist_3.7.0.GA.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.springframework_2.5.4.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.apache.mina.core_2.0.0.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.slf4j_1.5.0.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.apache.commons.collections_3.2.0.v200803061811.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/com.thoughtworks.org.apache.ecs_1.4.2.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/com.thoughtworks.org.apache.commons.jexl_1.1.0.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.apache.velocity_1.5.0.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/com.thoughtworks.net.sf.jsonlibs_2.4.0.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/com.thoughtworks.twist.core_2.3.1.11288.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.apache.ant_1.8.2.v20110505-1300/lib/ant.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.apache.ant_1.8.2.v20110505-1300/lib/ant-junit.jar"/>
+    </path>
+    <path id="com.thoughtworks.twist.driver.SAHI/2.0.0.libraryclasspath"/>
+    <path id="Java Language Support.libraryclasspath">
+        <pathelement location="${ECLIPSE_HOME}/plugins/com.thoughtworks.ognl_2.7.3.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.slf4j_1.5.0.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.apache.commons.lang_2.4.0.v201005080502.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/com.thoughtworks.twist.language.java_2.3.1.11288.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/com.thoughtworks.twist.language.core_2.3.1.11288.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/com.thoughtworks.twist.language.common_2.3.1.11288.jar"/>
+    </path>
+    <path id="Ofbiz.classpath">
+        <pathelement location="bin"/>
+        <path refid="JUnit 4.libraryclasspath"/>
+        <path refid="Twist Core Libraries.libraryclasspath"/>
+        <path refid="com.thoughtworks.twist.driver.SAHI/2.0.0.libraryclasspath"/>
+        <path refid="Java Language Support.libraryclasspath"/>
+        <pathelement location="twist-libs/ant-junit.jar"/>
+        <pathelement location="twist-libs/ant.jar"/>
+        <pathelement location="twist-libs/com.thoughtworks.net.sf.jsonlibs_2.4.0.jar"/>
+        <pathelement location="twist-libs/com.thoughtworks.ognl_2.7.3.jar"/>
+        <pathelement location="twist-libs/com.thoughtworks.org.apache.commons.jexl_1.1.0.jar"/>
+        <pathelement location="twist-libs/com.thoughtworks.org.apache.ecs_1.4.2.jar"/>
+        <pathelement location="twist-libs/com.thoughtworks.org.jboss.javassist_3.7.0.GA.jar"/>
+        <pathelement location="twist-libs/com.thoughtworks.twist.core_2.3.1.11288.jar"/>
+        <pathelement location="twist-libs/com.thoughtworks.twist.driver.core_2.3.1.11288.jar"/>
+        <pathelement location="twist-libs/com.thoughtworks.twist.driver.webdriver_2.5.0.11288.jar"/>
+        <pathelement location="twist-libs/com.thoughtworks.twist.language.common_2.3.1.11288.jar"/>
+        <pathelement location="twist-libs/com.thoughtworks.twist.language.core_2.3.1.11288.jar"/>
+        <pathelement location="twist-libs/com.thoughtworks.twist.language.java_2.3.1.11288.jar"/>
+        <pathelement location="twist-libs/junit.jar"/>
+        <pathelement location="twist-libs/mail.jar"/>
+        <pathelement location="twist-libs/mailapi.jar"/>
+        <pathelement location="twist-libs/org.apache.commons.codec_1.3.0.v201101211617.jar"/>
+        <pathelement location="twist-libs/org.apache.commons.collections_3.2.0.v200803061811.jar"/>
+        <pathelement location="twist-libs/org.apache.commons.lang_2.4.0.v201005080502.jar"/>
+        <pathelement location="twist-libs/org.apache.commons.logging_1.0.4.v201101211617.jar"/>
+        <pathelement location="twist-libs/org.apache.log4j_1.2.13.v200903072027.jar"/>
+        <pathelement location="twist-libs/org.apache.mina.core_2.0.0.jar"/>
+        <pathelement location="twist-libs/org.apache.velocity_1.5.0.jar"/>
+        <pathelement location="twist-libs/org.hamcrest.core_1.1.0.v20090501071000.jar"/>
+        <pathelement location="twist-libs/org.slf4j_1.5.0.jar"/>
+        <pathelement location="twist-libs/org.springframework_2.5.4.jar"/>
+        <pathelement location="twist-libs/selenium-server-standalone-2.5.0.jar"/>
+        <pathelement location="twist-libs/xmlrpc-client-3.1.3.jar"/>
+        <pathelement location="twist-libs/xmlrpc-common-3.1.3.jar"/>
+        <pathelement location="twist-libs/com.thoughtworks.webdriver.recorder_1.0.0.11288"/>
+    </path>
+    <target name="init">
+        <mkdir dir="bin"/>
+        <copy includeemptydirs="false" todir="bin">
+            <fileset dir="src">
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="bin"/>
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="build-subprojects,build-project" name="build"/>
+    <target name="build-subprojects"/>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="bin" source="${source}" target="${target}">
+            <src path="src"/>
+            <classpath refid="Ofbiz.classpath"/>
+        </javac>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+    <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
+        <copy todir="${ant.library.dir}">
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </copy>
+        <unzip dest="${ant.library.dir}">
+            <patternset includes="jdtCompilerAdapter.jar"/>
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </unzip>
+    </target>
+    <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
+        <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+        <antcall target="build"/>
+    </target>
+	
+        
+    <target name="execute-scenarios" description="Executes scenarios" depends="build">
+    	<path id="scenarios.classpath">
+			<path refid="${ant.project.name}.classpath" />
+			<fileset dir="${ant.library.dir}" includes="*.jar" />
+		</path>
+
+        <taskdef classname="com.thoughtworks.twist.core.execution.ant.ExecuteScenariosTask" classpathref="scenarios.classpath" name="twist.runner" />
+        <property name="test-reports" value="${basedir}/reports/ant-reports" />
+        <property name="twist-config" value="${basedir}/twist-conf"/>
+        <delete dir="${test-reports}" />
+        <mkdir dir="${test-reports}" />
+        <mkdir dir="${test-reports}/html" />
+
+		<twist.runner
+			scenarioDir="${basedir}/scenarios" reportsDir="${test-reports}" confDir="${twist-config}"
+			failureproperty="twist.scenarios.failed"
+			classpathref="scenarios.classpath" tags="!in-progress" threads="1" savedFilters="">
+			<fileset dir="${basedir}/scenarios" includes="*"/>
+		</twist.runner>
+
+        <fail if="twist.scenarios.failed" message="One or more scenarios failed during execution" />
+    </target>
+        
+	
+</project>
