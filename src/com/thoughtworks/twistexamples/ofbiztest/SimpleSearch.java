@@ -1,9 +1,9 @@
 package com.thoughtworks.twistexamples.ofbiztest;
 
-import org.openqa.selenium.WebDriver;
+import static junit.framework.Assert.assertTrue;
 
 import org.openqa.selenium.By;
-import static junit.framework.Assert.*;
+import org.openqa.selenium.WebDriver;
 
 public class SimpleSearch {
 
@@ -19,23 +19,25 @@ public class SimpleSearch {
 		browser.findElements(By.className("button")).get(0).click();
 	}
 
-	public void verifyThatSearchResultsShow(String searchString) throws Exception {
-		
+	public void verifyThatSearchResultsShow(String searchString)
+			throws Exception {
+
 		assertTrue(browser.findElements(By.linkText(searchString)).get(0)
 				.isDisplayed());
-	
+
 	}
 
-	public void verifyThatLastSearchesShows(String searchString) throws Exception {
-		
-		assertTrue(browser.findElements(By.tagName("LI")).get(42).getText().toLowerCase()
-				.contains(searchString.toLowerCase()));
-	
+	public void verifyThatLastSearchesShows(String searchString)
+			throws Exception {
+
+		assertTrue(browser.findElements(By.tagName("LI")).get(42).getText()
+				.toLowerCase().contains(searchString.toLowerCase()));
+
 	}
 
 	public void openProduct(String string1) throws Exception {
 		browser.findElements(By.linkText(string1)).get(0).click();
-	
+
 	}
 
 }

@@ -5,12 +5,11 @@ package com.thoughtworks.twistexamples.ofbiztest;
 import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertNotNull;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;
-
-import com.gargoylesoftware.htmlunit.javascript.background.JavaScriptExecutor;
 
 public class AddItemsToCart {
 
@@ -22,13 +21,19 @@ public class AddItemsToCart {
 
 	public void addToShoppingCart(String integer1, String string2)
 			throws Exception {
-		WebElement quantityInput = browser.findElements(By.name("quantity"))
-				.get(0);
-		quantityInput.clear();
-		quantityInput.sendKeys(integer1);
-		quantityInput.findElement(By.xpath("..")).findElement(By.tagName("a"))
-				.click();
+		List<WebElement> quantities = browser.findElement(
+				By.id("productdetail")).findElements(By.name("quantity"));
 
+		for (WebElement quantityInput : quantities) {
+			if (quantityInput.isDisplayed()) {
+				quantityInput.clear();
+				quantityInput.sendKeys(integer1);
+				quantityInput.findElement(By.xpath(".."))
+						.findElement(By.tagName("a")).click();
+
+				return;
+			}
+		}
 	}
 
 	public void navigateToShoppingCart() throws Exception {

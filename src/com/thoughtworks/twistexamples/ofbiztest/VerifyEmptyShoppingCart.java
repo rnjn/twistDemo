@@ -21,7 +21,7 @@ public class VerifyEmptyShoppingCart {
 	}
 
 	public void tearDown() throws Exception {
-		//This method is executed after the scenario execution finishes.
+		// This method is executed after the scenario execution finishes.
 	}
 
 }

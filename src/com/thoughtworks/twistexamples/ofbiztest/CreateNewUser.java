@@ -16,16 +16,18 @@ public class CreateNewUser {
 		RegisterUser registerUserWorkflow = new RegisterUser(browser);
 		registerUserWorkflow.navigateToTheUserRegistrationPage();
 		registerUserWorkflow.setAddressAs("one", "two", "three");
-		registerUserWorkflow.setEmailAddressAsAndPasswordAs("uriah@heep.com","password");
+		registerUserWorkflow.setEmailAddressAsAndPasswordAs("uriah@heep.com",
+				"password");
 		registerUserWorkflow.setNameAs("Mr.", "Uriah", "Heep");
-		registerUserWorkflow.setPostalCodeAsAndCountryAs("90210", "United Kingdom");
+		registerUserWorkflow.setPostalCodeAsAndCountryAs("90210",
+				"United Kingdom");
 		registerUserWorkflow.setPasswordHintAs("magician");
 		registerUserWorkflow.setUserNameWithPrefix("uriah");
 		registerUserWorkflow.registerUser();
 	}
 
 	public void tearDown() throws Exception {
-		//This method is executed after the scenario execution finishes.
+		// This method is executed after the scenario execution finishes.
 	}
 
 }

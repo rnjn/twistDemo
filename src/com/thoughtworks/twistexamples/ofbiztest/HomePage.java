@@ -2,9 +2,8 @@ package com.thoughtworks.twistexamples.ofbiztest;
 
 // JUnit Assert framework can be used for verification
 
-import org.openqa.selenium.WebDriver;
-
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 
 public class HomePage {
 
@@ -16,7 +15,7 @@ public class HomePage {
 
 	public void goToHomePage() throws Exception {
 		browser.findElement(By.linkText("Main")).click();
-	
+
 	}
 
 }

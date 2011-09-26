@@ -1,4 +1,5 @@
 package com.thoughtworks.twistexamples.ofbiztest;
+
 // JUnit Assert framework can be used for verification
 
 import org.openqa.selenium.WebDriver;
@@ -20,7 +21,7 @@ public class VisitOfbiz {
 	}
 
 	public void tearDown() throws Exception {
-//		this.browser.quit();
+		// this.browser.quit();
 	}
 
 }

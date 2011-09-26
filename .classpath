@@ -35,6 +35,6 @@
 	<classpathentry kind="lib" path="twist-libs/selenium-server-standalone-2.5.0.jar"/>
 	<classpathentry kind="lib" path="twist-libs/xmlrpc-client-3.1.3.jar"/>
 	<classpathentry kind="lib" path="twist-libs/xmlrpc-common-3.1.3.jar"/>
-	<classpathentry kind="lib" path="/Users/gogo/work/twistDemo/twist-libs/com.thoughtworks.webdriver.recorder_1.0.0.11288"/>
+	<classpathentry kind="lib" path="/home/r/work/twistDemo/twist-libs/com.thoughtworks.webdriver.recorder_1.0.0.11288"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
