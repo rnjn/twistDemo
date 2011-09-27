@@ -13,21 +13,21 @@ Before you run the twist demo, you would need to install Apache ofbiz. The requi
                                                                                                                                                                                      
 Once you have downloaded ofbiz 10.04 from [here](http://ofbiz.apache.org/download.html), just run the following commands in your favorite shell -                                     
                                                                                                                                                                                      
-#### ant install                                                                                                                                                                       
-#### ant run-install-exttest                                                                                                                                                           
-#### ant run                                                                                                                                                                           
+1. ` ant install  `                                                                                                                                                                     
+2. ` ant run-install-exttest  `                                                                                                                                                         
+3. ` ant run   `                                                                                                                                                                        
                                                                                                                                                                                      
 The third command above will start the website on [http://localhost:8080/ecommerce](http://localhost:8080/ecommerce) by default. Please test if you are able to access this site before starting the demo.              
                                                                                                                                                                                      
                                                                                                                                                                                      
 ## Demo Setup                                                                                                                                                                        
                                                                                                                                                                                      
-1. Clone the repo by running                                                                                                                                                         
-
-#### git clone https://github.com/rnjn/twistDemo.git {insert folder name}                                                                                                            
+1. Clone the repo by running
+                                                                                                                                                         
+ ` git clone https://github.com/rnjn/twistDemo.git {insert folder name} `                                                                                                           
 2. CD into the copied folder and run                                                                                                                                                 
-
-#### ant smoke                                                                                                                                                                          
+ `ant smoke`     
+                                                                                                                                                                     
 3. If everything works, the setup for twistDemo is done - enjoy going through the example scenarios.                                                                                 
 4. If some tests fail, its mostly a bad check-in, and I would be working on fixing it. Please look for an update soon.                                                               
 5. If all tests fail, there's something wrong with the setup.                                                                                                                        
