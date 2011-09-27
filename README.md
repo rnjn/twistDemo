@@ -22,12 +22,10 @@ The third command above will start the website on [http://localhost:8080/ecommer
                                                                                                                                                                                      
 ## Demo Setup                                                                                                                                                                        
                                                                                                                                                                                      
-1. Clone the repo by running
-                                                                                                                                                         
+1. Clone the repo by running                                                                                                                                                         
  ` git clone https://github.com/rnjn/twistDemo.git {insert folder name} `                                                                                                           
 2. CD into the copied folder and run                                                                                                                                                 
- `ant smoke`     
-                                                                                                                                                                     
+ `ant smoke`                                                                                                                                                                         
 3. If everything works, the setup for twistDemo is done - enjoy going through the example scenarios.                                                                                 
 4. If some tests fail, its mostly a bad check-in, and I would be working on fixing it. Please look for an update soon.                                                               
 5. If all tests fail, there's something wrong with the setup.                                                                                                                        
