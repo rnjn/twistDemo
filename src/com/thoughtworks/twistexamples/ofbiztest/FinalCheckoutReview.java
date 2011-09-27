@@ -12,37 +12,37 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import com.thoughtworks.twistexamples.pages.PaymentMethods;
+import com.thoughtworks.twistexamples.pages.ShippingMethods;
+
 import static junit.framework.Assert.*;
 
 public class FinalCheckoutReview {
-
-	private HashMap<String, String> paymentMethods = new HashMap<String, String>();
 	private WebDriver browser;
 
 	public FinalCheckoutReview(WebDriver browser) {
-		populatePaymentMethods();
 		this.browser = browser;
 	}
 
-	private void populatePaymentMethods() {
-		paymentMethods.put("COD", "Cash On Delivery");
-	}
-	
 	public void verifyThatIsIncludedInTheOrder(String string1) throws Exception {
-		
+
 		assertTrue(browser.findElements(By.partialLinkText(string1)).get(0)
 				.isDisplayed());
-		
+
 	}
 
-	public void verifyThatIsTheChosenPaymentMethod(String string1)
+	public void verifyThatIsTheChosenPaymentMethod(String paymentOption)
 			throws Exception {
-		assertTrue(verifyAtleastOneListItemContains(paymentMethods.get(string1)));
+		String paymentMethod = new PaymentMethods()
+				.getPaymentMethodDescription(paymentOption);
+		assertTrue(verifyAtleastOneListItemContains(paymentMethod));
 	}
 
-	public void verifyThatIsTheChosenShoppingMethod(String string1)
+	public void verifyThatIsTheChosenShippingMethod(String shippingOption)
 			throws Exception {
-		assertTrue(verifyAtleastOneListItemContains(string1));
+		String shippingMethodDescription = new ShippingMethods()
+				.getShippingMethodDescription(shippingOption);
+		assertTrue(verifyAtleastOneListItemContains(shippingMethodDescription));
 
 	}
 
@@ -61,7 +61,8 @@ public class FinalCheckoutReview {
 		assertTrue(verifyAtleastOneListItemContains(string1));
 	}
 
-	public void verifyThatIsSetAsTheGiftMessage(String string1) throws Exception {
+	public void verifyThatIsSetAsTheGiftMessage(String string1)
+			throws Exception {
 		assertTrue(verifyAtleastOneListItemContains(string1));
 	}
 
@@ -73,7 +74,7 @@ public class FinalCheckoutReview {
 		browser.findElement(By.name("processButton")).click();
 	}
 
-	public void verifyThatTheStatusOfTheOrderIsApproved() throws Exception {
-		assertTrue(verifyAtleastOneListItemContains("Status Approved"));
+	public void verifyThatTheStatusOfTheOrderIs(String status) throws Exception {
+		assertTrue(verifyAtleastOneListItemContains("Status " + status));
 	}
 }

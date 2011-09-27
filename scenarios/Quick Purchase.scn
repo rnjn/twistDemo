@@ -10,8 +10,8 @@ Final Checkout Review:
 #Verify that "Gold Pizza" is included in the order
 #Verify that "Enchiladas" is included in the order
 #Verify that "COD" is the chosen payment method
-#Verify that "FEDEX Next Afternoon" is the chosen shopping method
+#Verify that "FEDEX Next Afternoon" is the chosen shipping method
 #Verify that "Ship quick, or else..." are set as special instructions
 #Verify that this order is a gift
 #Verify that "A fine gift for me" is set as the gift message
-$Submit verified order and check if its approved
+$Submit verified order and check if its "Approved"

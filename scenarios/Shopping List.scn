@@ -23,4 +23,4 @@ Buy from Shopping List, Add items to Shopping List, Add items to cart, Quick Che
 #Verify that "2" "Round Gizmo" were added to the Shopping cart from Shopping List
 #Go to home page
 $Quick Checkout with "COD" as payment method "FEDEX Next Afternoon" as shipment method
-$Submit verified order and check if its approved
+$Submit verified order and check if its "Approved"

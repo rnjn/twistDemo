@@ -8,6 +8,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import com.thoughtworks.twistexamples.pages.PaymentMethods;
+import com.thoughtworks.twistexamples.pages.ShippingMethods;
+
 public class QuickCheckout {
 
 	private WebDriver browser;
@@ -21,11 +24,16 @@ public class QuickCheckout {
 
 	}
 
-	public void selectAsTheMethodOfPayment(String string1) throws Exception {
+	public void selectAsTheMethodOfPayment(String paymentOption)
+			throws Exception {
+
 		List<WebElement> paymentMethods = browser.findElements(By
 				.name("checkOutPaymentId"));
+		String paymentMethodCode = new PaymentMethods()
+				.getPaymentMethod(paymentOption);
+
 		for (WebElement paymentMethod : paymentMethods) {
-			if (paymentMethod.getAttribute("value").equals("EXT_COD")) {
+			if (paymentMethod.getAttribute("value").equals(paymentMethodCode)) {
 				paymentMethod.click();
 				return;
 			}
@@ -38,11 +46,14 @@ public class QuickCheckout {
 
 	}
 
-	public void selectAsTheShippingMethod(String string1) throws Exception {
+	public void selectAsTheShippingMethod(String shippingOption) throws Exception {
 		List<WebElement> shippingMethods = browser.findElements(By
 				.name("shipping_method"));
+		
+		String shippingMethodCode = new ShippingMethods().getShippingMethod(shippingOption);
+		
 		for (WebElement shippingMethod : shippingMethods) {
-			if (shippingMethod.getAttribute("value").equals("NEXT_PM@FEDEX")) {
+			if (shippingMethod.getAttribute("value").equals(shippingMethodCode)) {
 				shippingMethod.click();
 				return;
 			}

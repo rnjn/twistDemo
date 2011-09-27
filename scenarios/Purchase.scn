@@ -1,0 +1,28 @@
+Tags:purchase
+Preconditions:visit ofbiz,create new user
+Regular Checkout, Home Page:
+#Go to home page
+$Search for and add "4" numbers of "Enchiladas" to Shopping Cart
+$Search for and add "3" numbers of "Gold Pizza" to Shopping Cart
+#Checkout shopping cart
+
+Checkout Options, Quick Checkout:
+#Select default shipping address
+#Navigate to Checkout options
+#Select "FEDEX Express" as the shipping method
+#Choose to ship as items become available
+#Mark this purchase as a gift
+#Move next to Payment options
+
+Payment Options, Final Checkout Review:
+#Choose to pay with "Single Use Credit Card"
+#Set Billing address as "Old post office yard" "London"
+#Set Billing address State to "California" and postal code to "90210"
+#Set Billing address Country to "United States"
+#Set Credit Card Personal Information name for "Uriah" "Heep" 
+#Set  Credit Card to "Visa" "4111111111111111" to expire on "01" "2015"
+#Continue to Order Review
+#Verify that "Gold Pizza" is included in the order
+#Verify that "Enchiladas" is included in the order
+#Verify that "FEDEX Express" is the chosen shipping method
+$Submit verified order and check if its "Created"
