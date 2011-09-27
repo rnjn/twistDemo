@@ -22,7 +22,7 @@ public class AddItemsToCart {
 		this.browser = browser;
 	}
 
-	public void addToShoppingCart(String integer1, String string2)
+	public void addToShoppingCart(String quantity, String productName)
 			throws Exception {
 		List<WebElement> quantities = browser.findElement(
 				By.id("productdetail")).findElements(By.name("quantity"));
@@ -30,8 +30,8 @@ public class AddItemsToCart {
 		for (WebElement quantityInput : quantities) {
 			if (quantityInput.isDisplayed()) {
 				quantityInput.clear();
-				quantityInput.sendKeys(integer1);
-				quantityInput.findElement(By.xpath(".."))
+				quantityInput.sendKeys(quantity);
+				quantityInput.findElement(By.xpath("..")).findElement(By.xpath(".."))
 						.findElement(By.tagName("a")).click();
 
 				return;
