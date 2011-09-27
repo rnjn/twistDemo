@@ -11,7 +11,7 @@ Before you run the twist demo, you would need to install Apache ofbiz. The requi
 1. Java 1.6 JDK                                                                                                                                                                      
 2. Ant                                                                                                                                                                               
                                                                                                                                                                                      
-Once you have downloaded ofbiz 10.04 from [here](http://ofbiz.apache.org/download.html), just run the following commands in your favorite shell -                                     
+Once you have downloaded ofbiz 10.04 from [here](http://ofbiz.apache.org/download.html), unzip and store it in a safe place, and just run the following commands in your favorite shell after cd'ing into the said safe place -                                     
                                                                                                                                                                                      
 1. ` ant install  `                                                                                                                                                                     
 2. ` ant run-install-exttest  `                                                                                                                                                         
